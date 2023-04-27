@@ -6,6 +6,9 @@ export default {
     colors: {
       'neon-yellow': '#FFFF99',
     },
+    gridTemplateColumns: {
+      custom: 'repeat(auto-fit, minmax(250px, 1fr))',
+    },
   },
   plugins: [],
 };
