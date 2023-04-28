@@ -1,12 +1,12 @@
+// Component
 import Note from './Note';
 
-const NoteList = () => {
+const NoteList = ({ notes }) => {
   return (
-    <div className='note-layout grid grid-cols-custom gap-4 justify-items-center p-5'>
-      <Note />
-      <Note />
-      <Note />
-      <Note />
+    <div className='note-layout grid grid-cols-custom gap-6 p-5'>
+      {notes.map((note) => (
+        <Note />
+      ))}
     </div>
   );
 };
