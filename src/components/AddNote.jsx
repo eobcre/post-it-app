@@ -3,7 +3,7 @@ import { AiOutlineSave } from 'react-icons/Ai';
 
 const AddNote = () => {
   return (
-    <div className='flex flex-col justify-between bg-neon-yellow rounded-md w-72 p-5'>
+    <div className='flex flex-col justify-between bg-neon-yellow rounded-md w-72 h-64 p-5'>
       <textarea
         cols='10'
         rows='8'
