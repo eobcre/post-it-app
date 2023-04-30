@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {},
     colors: {
-      'neon-yellow': '#FFFF99',
+      'post-yellow': '#FFFF99',
+      'post-blue': '#43C1E9',
     },
     gridTemplateColumns: {
       custom: 'repeat(auto-fit, minmax(250px, 1fr))',
