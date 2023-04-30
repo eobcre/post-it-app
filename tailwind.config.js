@@ -5,7 +5,7 @@ export default {
     extend: {},
     colors: {
       'post-yellow': '#FFFF99',
-      'post-blue': '#43C1E9',
+      'post-blue': '#A3DBFD',
     },
     gridTemplateColumns: {
       custom: 'repeat(auto-fit, minmax(250px, 1fr))',
