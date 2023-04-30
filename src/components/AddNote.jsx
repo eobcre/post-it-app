@@ -11,7 +11,7 @@ const AddNote = () => {
         className='bg-neon-yellow outline-none resize-none'
       ></textarea>
       <footer className='flex justify-end'>
-        <AiOutlineSave className='text-2xl' />
+        <AiOutlineSave className='text-2xl hover:opacity-50 cursor-pointer' />
       </footer>
     </div>
   );

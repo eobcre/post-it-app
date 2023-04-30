@@ -6,7 +6,7 @@ const Note = ({ id, text, date }) => {
       <h1>{text}</h1>
       <footer className='flex justify-between items-center'>
         <small>{date}</small>
-        <RiDeleteBin2Line className='text-2xl' />
+        <RiDeleteBin2Line className='text-2xl hover:opacity-50 cursor-pointer' />
       </footer>
     </div>
   );
