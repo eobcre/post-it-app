@@ -22,7 +22,7 @@ const AddNote = ({ handleAddNote }) => {
         className='bg-post-blue outline-none resize-none'
         value={noteText}
         onChange={handleChange}
-      ></textarea>
+      />
       <footer className='flex justify-end'>
         <AiOutlineSave
           className='text-2xl hover:opacity-50 cursor-pointer'
