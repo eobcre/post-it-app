@@ -2,25 +2,32 @@ import { useState } from 'react';
 // react-icons
 import { AiOutlineSave } from 'react-icons/Ai';
 
-const AddNote = () => {
+const AddNote = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState('');
 
   const handleChange = (e) => {
     setNoteText(e.target.value);
   };
 
+  const handleSaveClick = () => {
+    handleAddNote(noteText);
+  };
+
   return (
-    <div className='flex flex-col justify-between bg-neon-yellow rounded-md w-72 h-64 p-5'>
+    <div className='flex flex-col justify-between bg-post-blue rounded-md w-72 h-64 p-5'>
       <textarea
         cols='10'
         rows='8'
         placeholder='Type your note.'
-        className='bg-neon-yellow outline-none resize-none'
+        className='bg-post-blue outline-none resize-none'
         value={noteText}
         onChange={handleChange}
       ></textarea>
       <footer className='flex justify-end'>
-        <AiOutlineSave className='text-2xl hover:opacity-50 cursor-pointer' />
+        <AiOutlineSave
+          className='text-2xl hover:opacity-50 cursor-pointer'
+          onClick={handleSaveClick}
+        />
       </footer>
     </div>
   );
