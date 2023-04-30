@@ -8,9 +8,13 @@ import { NoteData } from '../NoteData';
 const App = () => {
   const [notes, setNotes] = useState(NoteData);
 
+  const handleAddNote = (text) => {
+    console.log(text);
+  };
+
   return (
     <div className='max-w-4xl mx-auto'>
-      <NoteList notes={notes} />
+      <NoteList notes={notes} handleAddNote={handleAddNote} />
     </div>
   );
 };
