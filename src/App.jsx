@@ -27,9 +27,20 @@ const App = () => {
     setNotes(newNotes);
   };
 
+  const handleDeleteNote = (id) => {
+    const deleteNote = notes.filter((noteItem) => {
+      return noteItem.id !== id;
+    });
+    setNotes(deleteNote);
+  };
+
   return (
     <div className='max-w-4xl mx-auto'>
-      <NoteList notes={notes} handleAddNote={handleAddNote} />
+      <NoteList
+        notes={notes}
+        handleAddNote={handleAddNote}
+        handleDeleteNote={handleDeleteNote}
+      />
     </div>
   );
 };
