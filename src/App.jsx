@@ -1,12 +1,19 @@
-// Hooks
+// hooks
 import { useState } from 'react';
-// Component
+// component
 import NoteList from './components/NoteList';
-// Data
-import { NoteData } from '../NoteData';
+// nanoid
 import { nanoid } from 'nanoid';
 
 const App = () => {
+  const NoteData = [
+    {
+      id: nanoid(),
+      text: 'JavaScript is a high-level programming language that is widely used for web development.',
+      date: '6/1/2023',
+    },
+  ];
+
   const [notes, setNotes] = useState(NoteData);
 
   const handleAddNote = (text) => {
