@@ -4,12 +4,20 @@ import { useState } from 'react';
 import NoteList from './components/NoteList';
 // Data
 import { NoteData } from '../NoteData';
+import { nanoid } from 'nanoid';
 
 const App = () => {
   const [notes, setNotes] = useState(NoteData);
 
   const handleAddNote = (text) => {
-    console.log(text);
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: text,
+      date: date.toLocaleDateString(),
+    };
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
   };
 
   return (
