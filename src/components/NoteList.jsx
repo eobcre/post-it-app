@@ -2,7 +2,7 @@
 import Note from './Note';
 import AddNote from './AddNote';
 
-const NoteList = ({ notes, handleAddNote, handleDeleteNote }) => {
+const NoteList = ({ notes, handleDeleteNote }) => {
   return (
     <div className='grid grid-cols-custom gap-6 p-5'>
       {notes.map(({ id, text, date }) => (
@@ -14,7 +14,7 @@ const NoteList = ({ notes, handleAddNote, handleDeleteNote }) => {
           handleDeleteNote={handleDeleteNote}
         />
       ))}
-      <AddNote handleAddNote={handleAddNote} />
+      <AddNote />
     </div>
   );
 };
