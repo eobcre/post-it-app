@@ -1,9 +1,10 @@
-// hooks
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 // component
 import NoteList from './components/NoteList';
 // nanoid
 import { nanoid } from 'nanoid';
+
+export const MyContext = createContext();
 
 const App = () => {
   const NoteData = [
@@ -36,11 +37,9 @@ const App = () => {
 
   return (
     <div className='max-w-4xl mx-auto'>
-      <NoteList
-        notes={notes}
-        handleAddNote={handleAddNote}
-        handleDeleteNote={handleDeleteNote}
-      />
+      <MyContext.Provider value={handleAddNote}>
+        <NoteList notes={notes} handleDeleteNote={handleDeleteNote} />
+      </MyContext.Provider>
     </div>
   );
 };

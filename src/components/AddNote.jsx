@@ -1,16 +1,21 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+// useContext
+import { MyContext } from '../App';
+
 // react-icons
 import { AiOutlineSave } from 'react-icons/Ai';
 
-const AddNote = ({ handleAddNote }) => {
+const AddNote = () => {
   const [noteText, setNoteText] = useState('');
+
+  const value = useContext(MyContext);
 
   const handleChange = (e) => {
     setNoteText(e.target.value);
   };
 
   const handleSaveClick = () => {
-    handleAddNote(noteText);
+    value(noteText);
     setNoteText('');
   };
 
