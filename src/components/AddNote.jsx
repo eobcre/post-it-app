@@ -34,7 +34,7 @@ const AddNote = () => {
         className='bg-post-blue outline-none resize-none'
         value={noteText}
         onChange={handleChange}
-        onKeyPress={handleKeyDown}
+        onKeyDown={handleKeyDown}
       />
       <footer className='flex justify-end'>
         <AiOutlineSave
