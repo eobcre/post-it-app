@@ -18,6 +18,13 @@ const AddNote = () => {
     setNoteText('');
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSaveClick();
+    }
+  };
+
   return (
     <div className='flex flex-col justify-between bg-post-blue rounded-md w-72 h-64 p-5'>
       <textarea
@@ -27,6 +34,7 @@ const AddNote = () => {
         className='bg-post-blue outline-none resize-none'
         value={noteText}
         onChange={handleChange}
+        onKeyPress={handleKeyDown}
       />
       <footer className='flex justify-end'>
         <AiOutlineSave
