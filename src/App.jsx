@@ -37,8 +37,8 @@ const App = () => {
 
   return (
     <div className='max-w-4xl mx-auto'>
-      <MyContext.Provider value={handleAddNote}>
-        <NoteList notes={notes} handleDeleteNote={handleDeleteNote} />
+      <MyContext.Provider value={{ handleAddNote, handleDeleteNote }}>
+        <NoteList notes={notes} />
       </MyContext.Provider>
     </div>
   );
