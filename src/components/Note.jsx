@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import { MyContext } from '../App';
+// react-icons
 import { RiDeleteBin2Line } from 'react-icons/Ri';
 
-const Note = ({ id, text, date, handleDeleteNote }) => {
+const Note = ({ id, text, date }) => {
+  const { handleDeleteNote } = useContext(MyContext);
+
   return (
     <div className='flex flex-col justify-between bg-post-yellow rounded-md w-72 h-64 p-5'>
       <h1>{text}</h1>
