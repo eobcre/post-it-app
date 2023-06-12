@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { MyContext } from '../App';
 // react-icons
-import { RiDeleteBin2Line } from 'react-icons/Ri';
+import { RiDeleteBin2Line } from 'react-icons/ri';
 
 const Note = ({ id, text, date }) => {
   const { handleDeleteNote } = useContext(MyContext);
