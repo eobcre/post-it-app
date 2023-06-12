@@ -1,5 +1,6 @@
 import { useState, createContext } from 'react';
 // component
+import Header from './components/Header';
 import NoteList from './components/NoteList';
 // nanoid
 import { nanoid } from 'nanoid';
@@ -36,10 +37,13 @@ const App = () => {
   };
 
   return (
-    <div className='max-w-4xl mx-auto'>
-      <MyContext.Provider value={{ handleAddNote, handleDeleteNote }}>
-        <NoteList notes={notes} />
-      </MyContext.Provider>
+    <div className='bg-nude min-h-screen'>
+      <div className='max-w-4xl mx-auto'>
+        <Header />
+        <MyContext.Provider value={{ handleAddNote, handleDeleteNote }}>
+          <NoteList notes={notes} />
+        </MyContext.Provider>
+      </div>
     </div>
   );
 };
