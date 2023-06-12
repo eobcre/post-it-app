@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 // useContext
 import { MyContext } from '../App';
 // react-icons
-import { AiOutlineSave } from 'react-icons/Ai';
+import { AiOutlineSave } from 'react-icons/ai';
 
 const AddNote = () => {
   const [noteText, setNoteText] = useState('');
