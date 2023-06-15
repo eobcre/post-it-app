@@ -2,6 +2,7 @@ import { useState, createContext } from 'react';
 // component
 import Header from './components/Header';
 import NoteList from './components/NoteList';
+import Footer from './components/Footer';
 // nanoid
 import { nanoid } from 'nanoid';
 
@@ -43,6 +44,7 @@ const App = () => {
         <MyContext.Provider value={{ handleAddNote, handleDeleteNote }}>
           <NoteList notes={notes} />
         </MyContext.Provider>
+        <Footer />
       </div>
     </div>
   );
