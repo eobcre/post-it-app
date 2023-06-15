@@ -38,8 +38,8 @@ const App = () => {
   };
 
   return (
-    <div className='bg-nude min-h-screen'>
-      <div className='max-w-4xl mx-auto'>
+    <div className='bg-nude flex min-h-screen'>
+      <div className='flex-grow mx-auto max-w-4xl '>
         <Header />
         <MyContext.Provider value={{ handleAddNote, handleDeleteNote }}>
           <NoteList notes={notes} />
