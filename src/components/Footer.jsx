@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className='flex justify-center items-center h-24'>
+    <div className='sticky top-full flex justify-center items-center w-full h-24'>
       <small>&copy; 2023 Emmy Manning</small>
     </div>
   );
